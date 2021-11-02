@@ -1,0 +1,23 @@
+{
+    "name": "weprovide/magento2-module-async-defer-js",
+    "description": "A module which adds the \"async\" and \"defer\" HTML attributes to scripts",
+    "type": "magento2-module",
+    "license": "MIT",
+    "authors": [
+        {
+            "email": "julian@weprovide.com",
+            "name": "Julian van den Berkmortel"
+        }
+    ],
+    "require": {
+        "magento/framework": "~103.0.0",
+        "phpgt/dom": "2.1.6",
+        "ext-libxml": "*"
+    },
+    "autoload": {
+        "files": [ "src/registration.php" ],
+        "psr-4": {
+            "WeProvide\\AsyncDeferJs\\": "src"
+        }
+    }
+}

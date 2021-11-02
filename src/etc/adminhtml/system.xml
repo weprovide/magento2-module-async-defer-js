@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="dev">
+            <group id="js">
+                <field id="async_attr_regex" translate="label comment" type="text" sortOrder="22" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Regular Expression for "async"</label>
+                    <comment>If the source of a script matches this regular expression an "async" attribute will be added</comment>
+                </field>
+
+                <field id="defer_attr_regex" translate="label comment" type="text" sortOrder="24" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Regular Expression for "defer"</label>
+                    <comment>If the source of a script matches this regular expression a "defer" attribute will be added</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

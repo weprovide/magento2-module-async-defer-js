@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="WeProvide\AsyncDeferJs\Plugin\AddAsyncDeferToPageAssets">
+        <arguments>
+            <argument name="asyncRegexValueReader" xsi:type="object">WeProvide\AsyncDeferJs\Config\AsyncRegexValueReader</argument>
+            <argument name="deferRegexValueReader" xsi:type="object">WeProvide\AsyncDeferJs\Config\DeferRegexValueReader</argument>
+        </arguments>
+    </type>
+
+    <virtualType name="WeProvide\AsyncDeferJs\Config\AsyncRegexValueReader" type="WeProvide\AsyncDeferJs\Config\RegexValueReader">
+        <arguments>
+            <argument name="path" xsi:type="string">dev/js/async_attr_regex</argument>
+            <argument name="scopeType" xsi:type="const">Magento\Store\Model\ScopeInterface::SCOPE_STORE</argument>
+        </arguments>
+    </virtualType>
+
+    <virtualType name="WeProvide\AsyncDeferJs\Config\DeferRegexValueReader" type="WeProvide\AsyncDeferJs\Config\RegexValueReader">
+        <arguments>
+            <argument name="path" xsi:type="string">dev/js/defer_attr_regex</argument>
+            <argument name="scopeType" xsi:type="const">Magento\Store\Model\ScopeInterface::SCOPE_STORE</argument>
+        </arguments>
+    </virtualType>
+</config>
