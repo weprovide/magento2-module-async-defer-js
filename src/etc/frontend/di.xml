@@ -1,6 +1,13 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <type name="Magento\Framework\View\Page\Config\Renderer">
-        <plugin name="add_async_defer_to_page_assets" type="WeProvide\AsyncDeferJs\Plugin\AddAsyncDeferToPageAssets" />
+        <plugin name="add_async_defer_to_page_assets"
+                type="WeProvide\AsyncDeferJs\Plugin\AddAsyncDeferToPageAssets"
+                sortOrder="999"/>
+    </type>
+    <type name="Magento\Framework\View\Element\AbstractBlock">
+        <plugin name="add_async_defer_to_block_scripts"
+                type="WeProvide\AsyncDeferJs\Plugin\AddAsyncDeferToBlockScripts"
+                sortOrder="999"/>
     </type>
 </config>
