@@ -3,6 +3,11 @@
     <system>
         <section id="dev">
             <group id="js">
+                <field id="apply_async_defer_to_blocks" translate="label" type="select" sortOrder="21" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Check block scripts for "async" and "defer"</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
                 <field id="async_attr_regex" translate="label comment" type="text" sortOrder="22" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Regular Expression for "async"</label>
                     <comment>If the source of a script matches this regular expression an "async" attribute will be added</comment>

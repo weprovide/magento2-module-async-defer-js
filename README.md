@@ -22,4 +22,9 @@ $ bin/magento setup:upgrade --keep-generated
 In `System > Configuration > Advanced > Developer > JavaScript Settings` two configuration settings can be seen. One of them
 is the regular expression used for the `async` HTML attribute, the other for `defer`.
 
+There is also an other setting, the `Check block scripts for "async" and "defer"` which defaults to "No", and can be 
+enabled when there is also a need to apply `async` and `defer` to scripts inside blocks.
+
 ![Configuration Settings](adjs-configuration.png)
+
+The following regex can be used to match all scripts accept the require.js: `^((?!require.js).)*$`

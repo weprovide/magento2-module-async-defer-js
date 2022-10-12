@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <type name="WeProvide\AsyncDeferJs\Plugin\AddAsyncDeferToPageAssets">
+    <type name="WeProvide\AsyncDeferJs\Service\ScriptAdjuster">
         <arguments>
             <argument name="asyncRegexValueReader" xsi:type="object">WeProvide\AsyncDeferJs\Config\AsyncRegexValueReader</argument>
             <argument name="deferRegexValueReader" xsi:type="object">WeProvide\AsyncDeferJs\Config\DeferRegexValueReader</argument>
